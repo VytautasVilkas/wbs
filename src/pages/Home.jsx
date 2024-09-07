@@ -41,7 +41,7 @@ const Home = () => {
           <Weather city={selectedCity.capital} />
         </div>
       </div>
-      <Star />
+      {/* <Star /> */}
       <musicbox />
       <div className="no-select">
         <CitySelector selectedCity={selectedCity} onCityChange={setSelectedCity} />

@@ -11,7 +11,7 @@ const Starcollaps = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY; 
       const windowHeight = window.innerHeight; 
-      const newOpacity = Math.max(0.8 - scrollTop / (windowHeight / 2), 0.01); 
+      const newOpacity = Math.max(1 - scrollTop / (windowHeight / 2), 0.01); 
       setOpacity(newOpacity); 
     };
 
