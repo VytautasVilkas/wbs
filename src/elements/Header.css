@@ -1,0 +1,129 @@
+.home-header {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Neon Tubes', cursive; /* Optional: Neon-like font */
+  position: relative;
+  background-color: transparent; /* Ensure background is transparent */
+  animation: neon-flicker 3s infinite alternate;
+  text-shadow: 
+    -1px -1px 0 #000, /* Black outline to the top-left */
+    1px -1px 0 #000,  /* Black outline to the top-right */
+    -1px 1px 0 #000,  /* Black outline to the bottom-left */
+    1px 1px 0 #000,   /* Black outline to the bottom-right */
+    0 0 5px #ffffff,  /* Lighter shadow for a subtle glow */
+    0 0 10px #ffffff, 
+    0 0 15px #ffffff, 
+    0 0 20px #ffffff, 
+    0 0 25px #ffffff;  /* Reduce the intensity for a more subtle effect */
+}
+
+@keyframes neon-flicker {
+  0% {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 5px #ffffff, 
+      0 0 10px #ffffff, 
+      0 0 15px #ffffff, 
+      0 0 20px #ffffff, 
+      0 0 25px #ffffff;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 4px #dddddd, /* Softer flicker */
+      0 0 8px #dddddd, 
+      0 0 10px #dddddd, 
+      0 0 12px #dddddd, 
+      0 0 15px #dddddd;
+    opacity: 0.9;
+  }
+  100% {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 3px #bbbbbb, /* More subtle flicker */
+      0 0 6px #bbbbbb, 
+      0 0 9px #bbbbbb, 
+      0 0 10px #bbbbbb, 
+      0 0 12px #bbbbbb;
+    opacity: 0.8;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  40% {
+    transform: translateX(-25px) translateY(20px); /* Slightly move down */
+  }
+  50% {
+    transform: translateX(-25px) translateY(20px); /* Stay at this position */
+  }
+  60% {
+    transform: translateX(-25px) translateY(20px); /* Continue staying */
+  }
+  80% {
+    transform: translateX(0px) translateY(0px); /* Move back to top */
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* Reset to original */
+  }
+}
+
+.home-header span {
+  display: inline-block;
+  animation: wave 5s ease-in-out infinite;  /* Smooth and longer animation */
+  animation-delay: calc(0.1s * var(--i));  /* Staggered animation for each letter */
+}
+
+.home-header span:nth-child(1) { --i: 1; }
+.home-header span:nth-child(2) { --i: 2; }
+.home-header span:nth-child(3) { --i: 3; }
+.home-header span:nth-child(4) { --i: 4; }
+.home-header span:nth-child(5) { --i: 5; }
+.home-header span:nth-child(6) { --i: 6; }
+.home-header span:nth-child(7) { --i: 7; }
+.home-header span:nth-child(8) { --i: 8; }
+
+.home-header h3, .home-header h5 {
+  text-align: center;
+  font-family: 'Neon Tubes', cursive; /* Neon-style font */
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.home-header h3 {
+  font-size: 3rem;  /* Font size for "Vytautas" */
+  margin-top: 100px;
+}
+
+.home-header h5 {
+  font-size: 4rem;  /* Font size for "Vilkas" */
+  margin-top: -40px;  /* Adjust to align with animated name */
+  position: relative;
+}
+.word-span {
+  margin-right: 20px; /* Space between words */
+}
+.no-select {
+  user-select: none; /* Prevents text highlighting */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  cursor: default; /* Changes the cursor to indicate non-selectable content */
+}

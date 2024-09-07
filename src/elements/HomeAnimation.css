@@ -1,0 +1,15 @@
+.lottie-wrapper {
+  position: absolute; 
+  top: 0;
+  left: 100%; /* Start from the middle of the viewport horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 50vw; /* Cover 50% of the viewport's width */
+  height: 50vh; /* Cover 50% of the viewport's height */
+  z-index: 1;
+}
+
+
+
+
+
+

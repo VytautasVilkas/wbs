@@ -1,0 +1,52 @@
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.toggle-button {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  background-color: #070707;
+  color: rgb(255, 253, 253);
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  position: fixed;
+  bottom: 100px; /* Distance from the bottom to avoid collision with media player */
+  right: 20px; /* Distance from the right */
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.4); /* Stronger floating effect */
+  animation: float 3s ease-in-out infinite; /* Float animation */
+}
+
+.playlist-header {
+  z-index: 3;
+  margin-left: 10px; 
+  color: rgb(255, 255, 255);
+}
+
+.media-player {
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  max-width: 300px;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  background-color: #000000;
+  padding: 5px;
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.4); /* Stronger floating effect */
+  animation: float 3s ease-in-out infinite; /* Float animation */
+}

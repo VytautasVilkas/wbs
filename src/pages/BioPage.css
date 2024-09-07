@@ -1,0 +1,19 @@
+
+.cat-animation-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%; /* Adjust the size as necessary */
+  height: 50%; /* Adjust the size as necessary */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lottie-animation {
+  margin-bottom: 30px; /* Space below the animation */
+  transition: transform 0.3s ease-in-out;
+}
+.lottie-animation:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
