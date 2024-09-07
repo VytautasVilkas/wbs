@@ -1,28 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
 import Lottie from 'lottie-react';
 import catAnimation from '../animations/Cat.json'; // Path to your animation
-import './Theme.css'; // Import the main CSS
+
+import './Theme.css'; 
+import CitySelector from '../elements/Capitals';
+import Weather from '../elements/Weather';
+import Cloud from '../components/Cloud';
 
 
-const BioPage = () => {
+
+const BioPage  = () => {
+  const [selectedCity, setSelectedCity] = useState({ capital: 'Vilnius', code: 'LT' });
   return (
-    <div className="home-page">
-      
-      <Lottie animationData={catAnimation} style={{ width: 300, height: 300 }} />
-      <header className="bio-header no-select">
-        <h3>
-          <span className="span">A</span>
-          <span className="span">b</span>
-          <span className="span">o</span>
-          <span className="span">u</span>
-          <span className="span">t</span>
-          <span className="span">M</span>
-          <span className="span">e</span>
-        </h3>
-      </header>
-
-      <p style={{ color: 'white' }}>This is the biography page with a cat animation.</p>
+    
+    <div className="bio-page no-select">
+    <div>
+      <Weather city={selectedCity.capital} />
+      <CitySelector selectedCity={selectedCity} onCityChange={setSelectedCity} />
+      <Cloud />
     </div>
+  
+    {/* Correctly using <header> for page header content */}
+    <header className="bio-header">
+      <h3>
+        <span className="word-span">About</span>
+        <span className="span">Me</span>
+      </h3>
+    </header>
+  
+    {/* Use <div> for paragraph text instead of <header> */}
+    <div className="biography-text">
+      <p>
+        Sveiki
+      </p>
+    </div>
+  </div>
+    
+    
   );
 };
 

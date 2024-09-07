@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BucketPage from './pages/BucketPage'; // Main page with all sections
 import NotFound from './pages/NotFound';    // 404 Page
-
+import './styles.css'
 function App() {
   return (
     <Router>

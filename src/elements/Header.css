@@ -1,13 +1,16 @@
-.home-header {
-  margin-top: 0;
-  margin-bottom: 20px;
+.home-header, .bio-header {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full screen height to center content vertically */
+  text-align: center; /* Center the text itself */
   font-size: 5rem;
-  color: #fff;
+  color: #ffffff;
   z-index: 1;
-  text-align: center;
-  font-family: 'Neon Tubes', cursive; /* Optional: Neon-like font */
+  font-family: 'Neon Tubes', cursive;
   position: relative;
-  background-color: transparent; /* Ensure background is transparent */
+  background-color: transparent;
   animation: neon-flicker 3s infinite alternate;
   text-shadow: 
     -1px -1px 0 #000, /* Black outline to the top-left */
@@ -21,6 +24,7 @@
     0 0 25px #ffffff;  /* Reduce the intensity for a more subtle effect */
 }
 
+/* Keyframes for Neon Flicker Animation */
 @keyframes neon-flicker {
   0% {
     text-shadow: 
@@ -63,6 +67,7 @@
   }
 }
 
+/* Keyframes for Wave Animation */
 @keyframes wave {
   0% {
     transform: translateX(0) translateY(0);
@@ -84,41 +89,58 @@
   }
 }
 
-.home-header span {
+/* Animation on Each Letter (Wave Effect) */
+.home-header span, .bio-header span {
   display: inline-block;
   animation: wave 5s ease-in-out infinite;  /* Smooth and longer animation */
   animation-delay: calc(0.1s * var(--i));  /* Staggered animation for each letter */
 }
 
-.home-header span:nth-child(1) { --i: 1; }
-.home-header span:nth-child(2) { --i: 2; }
-.home-header span:nth-child(3) { --i: 3; }
-.home-header span:nth-child(4) { --i: 4; }
-.home-header span:nth-child(5) { --i: 5; }
-.home-header span:nth-child(6) { --i: 6; }
-.home-header span:nth-child(7) { --i: 7; }
-.home-header span:nth-child(8) { --i: 8; }
+.home-header span:nth-child(1), .bio-header span:nth-child(1) { --i: 1; }
+.home-header span:nth-child(2), .bio-header span:nth-child(2) { --i: 2; }
+.home-header span:nth-child(3), .bio-header span:nth-child(3) { --i: 3; }
+.home-header span:nth-child(4), .bio-header span:nth-child(4) { --i: 4; }
+.home-header span:nth-child(5), .bio-header span:nth-child(5) { --i: 5; }
+.home-header span:nth-child(6), .bio-header span:nth-child(6) { --i: 6; }
+.home-header span:nth-child(7), .bio-header span:nth-child(7) { --i: 7; }
+.home-header span:nth-child(8), .bio-header span:nth-child(8) { --i: 8; }
 
-.home-header h3, .home-header h5 {
+/* General Header Styling */
+.home-header h3, .bio-header h3 {
   text-align: center;
   font-family: 'Neon Tubes', cursive; /* Neon-style font */
   color: #fff;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  font-size: 3rem; /* Adjust font size */
 }
 
-.home-header h3 {
-  font-size: 3rem;  /* Font size for "Vytautas" */
-  margin-top: 100px;
-}
-
-.home-header h5 {
-  font-size: 4rem;  /* Font size for "Vilkas" */
-  margin-top: -40px;  /* Adjust to align with animated name */
+.home-header h5, .bio-header h5 {
+  text-align: center;
+  font-size: 4rem; /* Adjust font size for h5 */
   position: relative;
 }
+
+/* Space Between Words */
 .word-span {
   margin-right: 20px; /* Space between words */
 }
+.biography-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  align-items: center; /* Horizontally centers content */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Centers the text itself */
+  margin: 0;
+  padding: 0;
+  color: white
+}
+.biography-text p {
+  font-size: 1.2rem; /* Adjust the size as needed */
+  max-width: 600px; /* Limit text width for readability */
+  line-height: 1.6;
+}
+/* Prevent Text Selection */
 .no-select {
   user-select: none; /* Prevents text highlighting */
   -webkit-user-select: none;

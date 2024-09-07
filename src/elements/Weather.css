@@ -34,7 +34,7 @@
     padding: 15px; 
     text-align: center;
     max-width: 240px; 
-    width: 100%;
+    width: 120%;
     box-shadow: 3px 3px 10px rgba(230, 227, 227, 0.3); 
     position: relative;
 }
@@ -52,15 +52,16 @@
 }
 
 .weather-temp {
-    font-size: 30px; /* Smaller temperature font */
+    font-size: 20px; /* Smaller temperature font */
     font-weight: bold;
     margin-bottom: 8px;
 }
 
 .country-flag {
-    width: 40px; /* Smaller flag */
+    width: 50px; /* Smaller flag */
     height: auto;
-    border-radius: 3px;
+    border-radius: 2px;
+    align-items: right; 
 }
 
 .weather-desc {

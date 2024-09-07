@@ -4,7 +4,7 @@ import Bio from './BioPage';
 import './Theme.css'; // Your CSS file for page styling
 import ArrowButton from '../elements/ArrowButton';
 import Particles from '../components/Particles'; // Import Particles (snow effect)
-import Star from '../components/StarCollaps'
+import '../elements/Header.css';
 const BucketPage = () => {
   useEffect(() => {
     const hash = window.location.hash;
@@ -20,10 +20,8 @@ const BucketPage = () => {
     <div className="bucket-page">
       <div className="background-layer" /> {/* Background color here */}
       <Particles /> {/* Particles video layer */}
-      
       <ArrowButton />
       <div>
-      <Star />
         <section id="home-section">
           <Home /> {/* Home content */}
         </section>

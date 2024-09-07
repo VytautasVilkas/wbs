@@ -97,7 +97,7 @@ const Weather = ({ city }) => {
           <div className="drag-handle" ref={dragHandleRef}></div>
           <div className="weather-city-container">
             <h1 className="weather-city">{weather.name}</h1>
-            {flagUrl && <img className="country-flag" src={flagUrl} alt="Country flag" />}
+            {flagUrl && <img className="country-flag flag-container" src={flagUrl} alt="Country flag " />}
           </div>
           <p className="weather-temp">{weather.main.temp}°C</p>
           <p className="weather-desc">{weather.weather[0].description}</p>

@@ -1,6 +1,6 @@
 /* Theme.css */
 
-.home-page, .your-page {
+.home-page, .bio-page {
   position: relative; /* This ensures stacking context is controlled */
   z-index: 2; /* Ensures this is above particles */
   display: flex;
@@ -11,7 +11,10 @@
   min-height: 100vh;
   padding-top: 20px;
   font-family: Arial, sans-serif;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevents content from overflowing */
 }
+
 .bucket-page {
   position: relative;
   width: 100vw;
@@ -19,8 +22,8 @@
   display: flex;
   flex-direction: column;
   z-index: 0; /* Background color should be the lowest */
+  
 }
-
 .background-layer {
   position: absolute;
   top: 0;
@@ -30,27 +33,6 @@
   background-color: #000; /* Example background color */
   z-index: 0; /* Lowest layer (the background color) */
 }
-
-
-
-.your-page h1 {
-  font-size: 3em; /* Large, prominent header */
-  font-weight: bold; /* Bold for emphasis */
-  text-transform: uppercase; /* Uppercase text */
-  margin-top: 20px; /* Space above the header */
-  margin-bottom: 20px; /* Space below the header */
-  text-shadow: 2px 2px 8px rgba(243, 243, 243, 0.5); /* Subtle shadow for depth */
-}
-
-/* Paragraph styling */
-.your-page p {
-  font-size: 1.2em; /* Slightly larger than default font size */
-  line-height: 1.6; /* Comfortable line spacing */
-  color: #cccccc; /* Light grey text for a softer contrast */
-  max-width: 600px; /* Limit the width of the text */
-  margin-bottom: 20px; /* Space below the paragraph */
-}
-/* Container for the arrow button */
 .arrow-button-container {
   display: flex;
   justify-content: center;
